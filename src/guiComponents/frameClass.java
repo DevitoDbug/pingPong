@@ -10,6 +10,7 @@ public class frameClass extends JFrame {
 
         this.add(panel);
 
+        this.setFocusable(true);
         this.setBounds(250, 20 , 900, 700);
         this.setVisible(true);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);

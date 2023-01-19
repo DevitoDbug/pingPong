@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a98f6338-9d1e-4214-8b8f-3455284488c7" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pingPong.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/guiComponents/Ball.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/guiComponents/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/guiComponents/frameClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/guiComponents/panelClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logic/BouncingBall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/guiComponents/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guiComponents/frameClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiComponents/frameClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guiComponents/panelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiComponents/panelClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +52,14 @@
       <option name="presentableId" value="Default" />
       <updated>1672145714578</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1673458539699</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673458539699</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
