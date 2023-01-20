@@ -20,6 +20,8 @@ public class Player implements KeyListener {
     private final Color color;
     private final int size = 50 ;
 
+    int speed  = 8 ;
+
     public Player(int x , int y ,int score, String name, Color color) {
         this.score = score;
         this.name = name;
@@ -90,24 +92,23 @@ public class Player implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         int keyCode = e.getKeyCode();
-            switch (keyCode) {
-                case KeyEvent.VK_UP:
+            if (keyCode == KeyEvent.VK_UP) {
                     if (this.getY() > 0 && this.getX() == 0)
-                        this.y -= 2 ;
-                    break;
-                case KeyEvent.VK_DOWN:
-                    if (this.getY() < 600 && this.getX() == 0 )
-                        this.y += 2 ;
-                    break;
-                case KeyEvent.VK_U:
-                    if (this.getY() > 0 && this.getX() != 0)
-                        this.y -= 2 ;
-                    break;
-                case KeyEvent.VK_D:
-                    if (this.getY() < 600 && this.getX() != 0)
-                        this.y += 2 ;
-                    break;
+                        this.y -= speed;
             }
+            if (keyCode == KeyEvent.VK_DOWN) {
+                if (this.getY() < 610 && this.getX() == 0)
+                    this.y += speed;
+            }
+            if (keyCode == KeyEvent.VK_U) {
+                if (this.getY() > 0 && this.getX() != 0)
+                    this.y -= speed;
+            }
+            if (keyCode == KeyEvent.VK_D) {
+                    if (this.getY() < 610 && this.getX() != 0)
+                        this.y += speed ;
+            }
+
     }
 
     @Override
