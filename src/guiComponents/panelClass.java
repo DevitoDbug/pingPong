@@ -17,9 +17,13 @@ public class panelClass extends JPanel implements ActionListener {
 
         timer = new Timer(1,this);
         timer.start();
-        player1 = new Player(0 , 0  , 0 , "Player 1" , Color.cyan);
+        player1 = new Player(0 ,0 ,0 ,"Player 1", Color.cyan);
+
+        player2 = new Player(857, 0 ,0 ,"Player 2", Color.magenta);
+
 
         this.addKeyListener(player1);
+        this.addKeyListener(player2);
         this.setFocusable(true);
         this.setBackground(Color.BLACK);
         this.setLayout(null);
@@ -32,6 +36,12 @@ public class panelClass extends JPanel implements ActionListener {
         super.paintComponent(g);
         g.setColor(Color.cyan);
         player1.draw(g);
+        g.setColor(Color.magenta);
+        player2.draw(g);
+
+        //the line dividing the panel
+        g.setColor(Color.gray);
+        g.drawLine(450, 0 , 450 , 700);
 
 
     }

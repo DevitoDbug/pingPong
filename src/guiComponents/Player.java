@@ -16,9 +16,9 @@ public class Player implements KeyListener {
     private int y;
 
     private int score;
-    private String name ;
-    private Color color;
-    private int size = 50 ;
+    private final String name ;
+    private final Color color;
+    private final int size = 50 ;
 
     public Player(int x , int y ,int score, String name, Color color) {
         this.score = score;
@@ -70,7 +70,7 @@ public class Player implements KeyListener {
     void draw (Graphics g)
     {
         g.setColor(this.getColor());
-        g.fillRect(this.getX() , this.getY() ,(int)this.size/2 ,this.size);
+        g.fillRect(this.getX() , this.getY() ,this.size/2 ,this.size);
     }
 
     /**
@@ -80,24 +80,34 @@ public class Player implements KeyListener {
     @Override
     public void keyTyped(KeyEvent e) {}
 
+
+    /**
+     *
+     * I had to determine if it's the player on the right or on the left
+     * I decided to check for the x position of the pad
+     *
+     */
     @Override
     public void keyPressed(KeyEvent e) {
-        System.out.println("Key pressed method");
         int keyCode = e.getKeyCode();
-        if (this.getY() > 700 || this.getY() < 0 ) {
             switch (keyCode) {
                 case KeyEvent.VK_UP:
-                    this.y -- ;
+                    if (this.getY() > 0 && this.getX() == 0)
+                        this.y -= 2 ;
                     break;
                 case KeyEvent.VK_DOWN:
-                    this.y ++ ;
+                    if (this.getY() < 600 && this.getX() == 0 )
+                        this.y += 2 ;
+                    break;
+                case KeyEvent.VK_U:
+                    if (this.getY() > 0 && this.getX() != 0)
+                        this.y -= 2 ;
+                    break;
+                case KeyEvent.VK_D:
+                    if (this.getY() < 600 && this.getX() != 0)
+                        this.y += 2 ;
                     break;
             }
-        }
-        else
-        {
-            //no movement past the screen
-        }
     }
 
     @Override
