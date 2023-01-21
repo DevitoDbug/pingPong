@@ -38,14 +38,6 @@ public class Ball {
 
     public void move(char axis)
     {
-        switch (axis)
-        {
-            case 'x':
-                yVelocity *= -1;
-                break;
-            case 'y':
-                xVelocity *= -1;
-                break;
-        }
+
     }
 }

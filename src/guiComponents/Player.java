@@ -72,7 +72,7 @@ public class Player implements KeyListener {
     void draw (Graphics g)
     {
         g.setColor(this.getColor());
-        g.fillRect(this.getX() , this.getY() ,this.size/2 ,this.size);
+        g.fillRect(this.getX() , this.getY() ,this.size/3 ,this.size);
     }
 
     /**
@@ -92,19 +92,19 @@ public class Player implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         int keyCode = e.getKeyCode();
-            if (keyCode == KeyEvent.VK_UP) {
+            if (keyCode == KeyEvent.VK_U) {
                     if (this.getY() > 0 && this.getX() == 0)
                         this.y -= speed;
             }
-            if (keyCode == KeyEvent.VK_DOWN) {
+            if (keyCode == KeyEvent.VK_D) {
                 if (this.getY() < 610 && this.getX() == 0)
                     this.y += speed;
             }
-            if (keyCode == KeyEvent.VK_U) {
+            if (keyCode == KeyEvent.VK_UP) {
                 if (this.getY() > 0 && this.getX() != 0)
                     this.y -= speed;
             }
-            if (keyCode == KeyEvent.VK_D) {
+            if (keyCode == KeyEvent.VK_DOWN) {
                     if (this.getY() < 610 && this.getX() != 0)
                         this.y += speed ;
             }

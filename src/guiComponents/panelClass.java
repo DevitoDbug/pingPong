@@ -17,7 +17,7 @@ public class panelClass extends JPanel implements ActionListener {
 
         timer = new Timer(1,this);
         timer.start();
-        player1 = new Player(0 ,0 ,0 ,"Player 1", Color.cyan);
+        player1 = new Player(5,0 ,0 ,"Player 1", Color.cyan);
 
         player2 = new Player(857, 0 ,0 ,"Player 2", Color.magenta);
 
@@ -43,6 +43,11 @@ public class panelClass extends JPanel implements ActionListener {
         g.setColor(Color.gray);
         g.drawLine(450, 0 , 450 , 700);
 
+        //Printing the player name and the scores
+        g.setColor(Color.LIGHT_GRAY);
+        g.setFont(new Font("Arial", Font.PLAIN, 25));
+        g.drawString("Player1: "+player1.getScore() , 300 , 25 );
+        g.drawString("Player2: "+player2.getScore(), 480 , 25 );
 
     }
 
