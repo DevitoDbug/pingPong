@@ -18,7 +18,7 @@ public class Player implements KeyListener {
     private int score;
     private final String name ;
     private final Color color;
-    private final int size = 50 ;
+    private final int size = 60 ;
 
     int speed  = 8 ;
 

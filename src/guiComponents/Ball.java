@@ -1,12 +1,15 @@
 package guiComponents;
 
+import java.awt.*;
+
 public class Ball {
 
-    double x ;
-    double y ;
-    double xVelocity;
-    double yVelocity;
-    int size ;
+    private double x ;
+    private double y ;
+    private double xVelocity;
+    private double yVelocity;
+    private final int size ;
+    private Color color  = Color.white;
 
     public Ball(double x, double y, double xVelocity, double yVelocity, int size) {
         this.x = x;
@@ -14,6 +17,7 @@ public class Ball {
         this.xVelocity = xVelocity;
         this.yVelocity = yVelocity;
         this.size = size;
+        
     }
 
     public double getX() {
@@ -36,8 +40,31 @@ public class Ball {
         return size;
     }
 
-    public void move(char axis)
-    {
+    public Color getColor1() {
+        return color;
+    }
 
+    public void setxVelocity(double xVelocity) {
+        this.xVelocity = xVelocity;
+    }
+
+    public void setyVelocity(double yVelocity) {
+        this.yVelocity = yVelocity;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public void updateSpeed ()
+    {
+        this.xVelocity += 1 ;
+        this.yVelocity += 1 ;
+    }
+
+    public void updatePosition()
+    {
+        x += xVelocity;
+        y += yVelocity;
     }
 }

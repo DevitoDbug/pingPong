@@ -10,14 +10,35 @@ public class BouncingBall {
     double speed = 10 ;
     private final int size  = 10 ;
 
-    int SCREEN_WIDTH = 500;
-    int SCREEN_HEIGHT = 700;
+    /**
+     * Maximum x and y for the ball to reach
+     */
+    final int BOTTOMx  = 873 ;
+    final int BOTTOMy  = 650 ;
 
     Ball ball ;
-
     public BouncingBall()
     {
         ball = new Ball(x , y , speed ,speed , size);
+
+    }
+
+    public void updatePosition ()
+    {
+        //check if the wall is hit
+        if (ball.getX() > BOTTOMx || ball.getX() < 0 )
+        {
+            //Reversing the x direction of the ball
+            ball.setxVelocity(ball.getxVelocity() * -1);
+        }
+        if (ball.getY() > BOTTOMy || ball.getY() < 0)
+        {
+            //reversing the y direction of the ball
+            ball.setyVelocity(ball.getyVelocity() * -1);
+        }
+
+        //moving the ball
+        ball.updatePosition();
 
     }
 
@@ -27,22 +48,5 @@ public class BouncingBall {
         g.setColor(Color.cyan);
         g.fillOval((int)ball.getX() ,(int)ball.getY() ,ball.getSize() ,ball.getSize());
     }
-
-    void CheckCollison()
-    {
-        //creating the bouncing mechanism of the ball
-        //moves the ball within the panel
-        if (ball.getX()+ ball.getSize() > SCREEN_WIDTH || ball.getX()+ ball.getSize() < 0)
-        {
-            ball.move('x');
-        }
-
-        if (ball.getY()+ ball.getSize() > SCREEN_HEIGHT || ball.getY()+ ball.getSize() < SCREEN_HEIGHT)
-        {
-            ball.move('y');
-        }
-
-    }
-
 
 }
