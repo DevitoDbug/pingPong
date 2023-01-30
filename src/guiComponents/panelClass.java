@@ -1,6 +1,7 @@
 package guiComponents;
 
 import logic.BouncingBall;
+import logic.KeyListenerClass;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,8 +24,11 @@ public class panelClass extends JPanel implements ActionListener {
 
         bouncingBall = new BouncingBall();
 
+        KeyListenerClass keyListenerClass = new KeyListenerClass(this);
+
         this.addKeyListener(player1);
         this.addKeyListener(player2);
+        this.addKeyListener(keyListenerClass);
         this.setFocusable(true);
         this.setBackground(Color.BLACK);
         this.setLayout(null);
@@ -80,11 +84,19 @@ public class panelClass extends JPanel implements ActionListener {
     public void PauseGame()
     {
         timer.stop();
+    }
 
+    public void ContinuePlay()
+    {
+        timer.start();
     }
     public void EndGame()
     {
         timer.stop();
+    }
 
+    public void ReplayGame()
+    {
+        timer.restart();
     }
 }

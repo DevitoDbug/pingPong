@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a98f6338-9d1e-4214-8b8f-3455284488c7" name="Changes" comment="Bug fixing">
+      <change afterPath="$PROJECT_DIR$/src/logic/KeyListenerClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/guiComponents/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiComponents/Ball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guiComponents/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiComponents/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/guiComponents/panelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiComponents/panelClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logic/BouncingBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/BouncingBall.java" afterDir="false" />
     </list>
@@ -95,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674616407359</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Bug fixing">
+      <created>1675092895633</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675092895633</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

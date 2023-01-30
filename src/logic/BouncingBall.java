@@ -8,7 +8,6 @@ public class BouncingBall {
     double x  = 50 ;
     double y = 50;
     double speed = 1 ;
-    private final int size  = 20 ;
 
     /**
      * Maximum x and y for the ball to reach

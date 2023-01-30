@@ -8,16 +8,14 @@ public class Ball {
     private double y ;
     private double xVelocity;
     private double yVelocity;
-    private final int size ;
+    private final int size = 20;
     private Color color  = Color.white;
 
-    public Ball(double x, double y, double xVelocity, double yVelocity, int size) {
+    public Ball(double x, double y, double xVelocity, double yVelocity) {
         this.x = x;
         this.y = y;
         this.xVelocity = xVelocity;
         this.yVelocity = yVelocity;
-        this.size = size;
-        
     }
 
     public double getX() {
