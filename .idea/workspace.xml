@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a98f6338-9d1e-4214-8b8f-3455284488c7" name="Changes" comment="Modified the player pads">
+    <list default="true" id="a98f6338-9d1e-4214-8b8f-3455284488c7" name="Changes" comment="Bug fixing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/guiComponents/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiComponents/Ball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/guiComponents/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiComponents/Player.java" afterDir="false" />
@@ -88,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674292164816</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Coding the ball bounce effect">
+      <created>1674616407359</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674616407359</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -96,6 +103,8 @@
     <MESSAGE value="Changes" />
     <MESSAGE value="Made individual players mobile" />
     <MESSAGE value="Modified the player pads" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified the player pads" />
+    <MESSAGE value="Coding the ball bounce effect" />
+    <MESSAGE value="Bug fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixing" />
   </component>
 </project>

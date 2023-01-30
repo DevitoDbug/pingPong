@@ -3,6 +3,7 @@ package guiComponents;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.geom.Rectangle2D;
 
 public class Player implements KeyListener {
     /**
@@ -28,6 +29,7 @@ public class Player implements KeyListener {
         this.color = color;
         this.x = x;
         this.y = y ;
+
     }
 
     public int getX() {
@@ -72,7 +74,7 @@ public class Player implements KeyListener {
     void draw (Graphics g)
     {
         g.setColor(this.getColor());
-        g.fillRect(this.getX() , this.getY() ,this.size/3 ,this.size);
+        g.fillRect(this.getX() , this.getY() ,this.size/6 ,this.size);
     }
 
     /**
@@ -81,7 +83,6 @@ public class Player implements KeyListener {
      */
     @Override
     public void keyTyped(KeyEvent e) {}
-
 
     /**
      *
@@ -108,9 +109,7 @@ public class Player implements KeyListener {
                     if (this.getY() < 610 && this.getX() != 0)
                         this.y += speed ;
             }
-
     }
-
     @Override
     public void keyReleased(KeyEvent e) {}
 }
