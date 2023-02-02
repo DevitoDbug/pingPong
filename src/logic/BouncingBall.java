@@ -3,10 +3,9 @@ package logic;
 import guiComponents.Ball;
 
 import java.awt.*;
+import java.util.Random;
 
 public class BouncingBall {
-    double x  = 50 ;
-    double y = 50;
     double speed = 1 ;
 
     /**
@@ -17,7 +16,7 @@ public class BouncingBall {
 
     public Ball ball ;
 
-    public BouncingBall() {
+    public BouncingBall(double x, double y) {
         ball = new Ball(x , y , speed ,speed);
     }
 

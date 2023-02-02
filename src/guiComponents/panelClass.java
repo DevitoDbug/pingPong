@@ -7,22 +7,32 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.geom.Line2D;
+import java.util.Random;
+
 public class panelClass extends JPanel implements ActionListener {
+    Random r = new Random();
+    double startX = 0;
+    double startY = r.nextDouble(30,600);
+
+
     String player1Name = "Player1 :";
     String player2Name = "Player2 :";
 
     BouncingBall bouncingBall;
     public Player player1;
     public Player player2;
+    final int MaxWidth = 900 ;
     Timer timer ;
     panelClass() {
         timer = new Timer(1,this);
         timer.start();
-        player1 = new Player(0,0 ,0 );
+        player1 = new Player(10,0 ,0 , Color.magenta);
 
-        player2 = new Player(869, 0 ,0 );
+        player2 = new Player(869, 0 ,0 , Color.cyan);
 
-        bouncingBall = new BouncingBall();
+        StartingPosition();
+        bouncingBall = new BouncingBall(startX,startY);
 
         KeyListenerClass keyListenerClass = new KeyListenerClass(this);
 
@@ -39,6 +49,7 @@ public class panelClass extends JPanel implements ActionListener {
         super.paintComponent(g);
         g.setColor(Color.cyan);
         player1.draw(g);
+
         g.setColor(Color.magenta);
         player2.draw(g);
 
@@ -61,6 +72,17 @@ public class panelClass extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         repaint();
+        //checking for missed ball
+        if (bouncingBall.ball.oval.getX() > MaxWidth)
+            player1.setScore(player1.getScore() +1);
+        if(bouncingBall.ball.oval.getX() < 0)
+            player2.setScore(player2.getScore()+1);
+        if (bouncingBall.ball.oval.getX() > MaxWidth || bouncingBall.ball.oval.getX() < 0 ){
+            EndGame();
+            StartingPosition();
+            bouncingBall = new BouncingBall(startX,startY );
+            ContinuePlay();
+        }
     }
 
     /**
@@ -69,36 +91,36 @@ public class panelClass extends JPanel implements ActionListener {
     public void padImpact()
     {
         //checking if player one hits the ball
-       if(bouncingBall.ball.oval.intersects(player1.rectangle))
-       {
+       if(bouncingBall.ball.oval.intersects(player1.rectangle)){
            bouncingBall.ball.setxVelocity(bouncingBall.ball.getxVelocity() * -1);
-           player1.setScore(player1.getScore()+1);
        }
 
        //checking if player 2 hits the ball
-        if(bouncingBall.ball.oval.intersects(player2.rectangle))
-        {
+        if(bouncingBall.ball.oval.intersects(player2.rectangle)){
             bouncingBall.ball.setxVelocity(bouncingBall.ball.getxVelocity() * -1);
-            player2.setScore(player2.getScore()+1);
         }
     }
 
-    public void PauseGame()
-    {
+    public void PauseGame() {
         timer.stop();
     }
 
-    public void ContinuePlay()
-    {
+    public void ContinuePlay() {
         timer.start();
     }
-    public void EndGame()
-    {
+    public void EndGame() {
         timer.stop();
     }
-
-    public void ReplayGame()
+    public void StartingPosition()
     {
-        timer.restart();
+        /**
+         * trying to generate the ball at a random position without generating it behind a player
+         */
+        Line2D line = new Line2D.Float(0, (int)startY, 900, (int)startY);
+        while (player1.rectangle.intersectsLine(line))
+        {
+            startY = r.nextDouble(30,600);
+        }
+
     }
 }

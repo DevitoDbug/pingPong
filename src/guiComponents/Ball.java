@@ -31,15 +31,14 @@ public class Ball {
         this.yVelocity = yVelocity;
     }
 
-    public void updateSpeed ()
-    {
-        this.xVelocity += 1 ;
-        this.yVelocity += 1 ;
-    }
-
     public void updatePosition()
     {
         oval.setFrame(oval.getX()+ xVelocity, oval.getY()+yVelocity,
                 oval.getWidth(),oval.getHeight());
+    }
+
+    public void updateSpeed()
+    {
+        xVelocity ++ ;
     }
 }
