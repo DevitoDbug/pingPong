@@ -3,65 +3,21 @@ package guiComponents;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.geom.Rectangle2D;
 
 public class Player implements KeyListener {
-    /**
-     * x position of the bar
-     */
-    private int x ;
-
-    /**
-     * y position of the bar
-     */
-    private int y;
-
     private int score;
-    private final String name ;
-    private final Color color;
-    private final int size = 60 ;
 
-    int speed  = 8 ;
+    Rectangle rectangle ;
 
-    public Player(int x , int y ,int score, String name, Color color) {
+    public Player(int x , int y ,int score) {
+        final int size = 60 ;
         this.score = score;
-        this.name = name;
-        this.color = color;
-        this.x = x;
-        this.y = y ;
+        rectangle = new Rectangle (x,y,size/6,size);
 
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    public int getSize() {
-        return size;
     }
 
     public int getScore() {
         return score;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public Color getColor() {
-        return color;
     }
 
     public void setScore(int score) {
@@ -73,8 +29,10 @@ public class Player implements KeyListener {
      */
     void draw (Graphics g)
     {
-        g.setColor(this.getColor());
-        g.fillRect(this.getX() , this.getY() ,this.size/6 ,this.size);
+        g.setColor(Color.RED);
+        g.fillRect((int)this.rectangle.getX() , (int)this.rectangle.getY()
+                ,this.rectangle.getBounds().width,(int)this.rectangle.getHeight());
+
     }
 
     /**
@@ -93,21 +51,30 @@ public class Player implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         int keyCode = e.getKeyCode();
+        int speed  = 8 ;
+
+        //movement for the right player
             if (keyCode == KeyEvent.VK_U) {
-                    if (this.getY() > 0 && this.getX() == 0)
-                        this.y -= speed;
+                    if (this.rectangle.getY() > 0 && this.rectangle.getX() == 0)
+                        this.rectangle.setRect(rectangle.getX(), (rectangle.getY() - speed),
+                                rectangle.getWidth(), rectangle.getHeight());
             }
             if (keyCode == KeyEvent.VK_D) {
-                if (this.getY() < 610 && this.getX() == 0)
-                    this.y += speed;
+                if (this.rectangle.getY() < 610 && this.rectangle.getX() == 0)
+                    rectangle.setRect(rectangle.getX(), rectangle.getY() + speed,
+                            rectangle.getWidth(), rectangle.getHeight());
             }
+
+        //movement for the left player
             if (keyCode == KeyEvent.VK_UP) {
-                if (this.getY() > 0 && this.getX() != 0)
-                    this.y -= speed;
+                if (this.rectangle.getY() > 0 && this.rectangle.getX() != 0)
+                    this.rectangle.setRect(rectangle.getX(), (rectangle.getY() - speed),
+                            rectangle.getWidth(), rectangle.getHeight());
             }
             if (keyCode == KeyEvent.VK_DOWN) {
-                    if (this.getY() < 610 && this.getX() != 0)
-                        this.y += speed ;
+                    if (this.rectangle.getY() < 610 && this.rectangle.getX() != 0)
+                        rectangle.setRect(rectangle.getX(), rectangle.getY() + speed,
+                                rectangle.getWidth(), rectangle.getHeight());
             }
     }
     @Override

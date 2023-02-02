@@ -22,7 +22,7 @@ public class BouncingBall {
     }
 
     public void updatePosition () {
-        if (ball.getY() >= BOTTOMy || ball.getY() < 0) {
+        if (ball.oval.getY() >= BOTTOMy || ball.oval.getY() < 0) {
             //reversing the y direction of the ball
             ball.setyVelocity(ball.getyVelocity() * -1);
         }
@@ -33,6 +33,7 @@ public class BouncingBall {
     public void drawGame(Graphics g) {
         //drawing the ball on the panel
         g.setColor(Color.red);
-        g.fillOval((int)ball.getX() ,(int)ball.getY() ,ball.getSize() ,ball.getSize());
+        g.fillOval((int)ball.oval.getX() ,(int)ball.oval.getY() ,
+                (int)ball.oval.getWidth(),(int)ball.oval.getHeight());
     }
 }

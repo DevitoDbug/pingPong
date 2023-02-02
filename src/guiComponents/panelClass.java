@@ -18,9 +18,9 @@ public class panelClass extends JPanel implements ActionListener {
     panelClass() {
         timer = new Timer(1,this);
         timer.start();
-        player1 = new Player(0,0 ,0 , player1Name, Color.cyan);
+        player1 = new Player(0,0 ,0 );
 
-        player2 = new Player(869, 0 ,0 , player2Name, Color.magenta);
+        player2 = new Player(869, 0 ,0 );
 
         bouncingBall = new BouncingBall();
 
@@ -68,14 +68,16 @@ public class panelClass extends JPanel implements ActionListener {
      */
     public void padImpact()
     {
-       if (bouncingBall.ball.getX() == player1.getX()+17 &&
-               (bouncingBall.ball.getY() >= player1.getY()-5 && bouncingBall.ball.getY() <= player1.getY()+65) ) {
+        //checking if player one hits the ball
+       if(bouncingBall.ball.oval.intersects(player1.rectangle))
+       {
            bouncingBall.ball.setxVelocity(bouncingBall.ball.getxVelocity() * -1);
            player1.setScore(player1.getScore()+1);
        }
 
-        if ((int)bouncingBall.ball.getX() == player2.getX()-17 &&
-                (bouncingBall.ball.getY() >= player2.getY()-5 && bouncingBall.ball.getY() <= player2.getY()+65)) {
+       //checking if player 2 hits the ball
+        if(bouncingBall.ball.oval.intersects(player2.rectangle))
+        {
             bouncingBall.ball.setxVelocity(bouncingBall.ball.getxVelocity() * -1);
             player2.setScore(player2.getScore()+1);
         }

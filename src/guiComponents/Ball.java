@@ -1,29 +1,18 @@
 package guiComponents;
 
-import java.awt.*;
+import java.awt.geom.Ellipse2D;
 
 public class Ball {
 
-    private double x ;
-    private double y ;
     private double xVelocity;
     private double yVelocity;
-    private final int size = 20;
-    private Color color  = Color.white;
+    public Ellipse2D oval;
 
     public Ball(double x, double y, double xVelocity, double yVelocity) {
-        this.x = x;
-        this.y = y;
+        final int size = 20;
         this.xVelocity = xVelocity;
         this.yVelocity = yVelocity;
-    }
-
-    public double getX() {
-        return x;
-    }
-
-    public double getY() {
-        return y;
+        oval = new Ellipse2D.Double(x, y, size, size);
     }
 
     public double getxVelocity() {
@@ -34,24 +23,12 @@ public class Ball {
         return yVelocity;
     }
 
-    public int getSize() {
-        return size;
-    }
-
-    public Color getColor1() {
-        return color;
-    }
-
     public void setxVelocity(double xVelocity) {
         this.xVelocity = xVelocity;
     }
 
     public void setyVelocity(double yVelocity) {
         this.yVelocity = yVelocity;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
     }
 
     public void updateSpeed ()
@@ -62,7 +39,7 @@ public class Ball {
 
     public void updatePosition()
     {
-        x += xVelocity;
-        y += yVelocity;
+        oval.setFrame(oval.getX()+ xVelocity, oval.getY()+yVelocity,
+                oval.getWidth(),oval.getHeight());
     }
 }
