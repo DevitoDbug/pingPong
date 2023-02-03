@@ -29,7 +29,7 @@ public class panelClass extends JPanel implements ActionListener {
         timer.start();
         player1 = new Player(10,0 ,0 , Color.magenta);
 
-        player2 = new Player(865, 0 ,0 , Color.cyan);
+        player2 = new Player(859, 0 ,0 , Color.cyan);
 
         //generating random starting position for the ball
         StartingPosition();

@@ -28,8 +28,10 @@ public class Player implements KeyListener {
      * drawing the bar for a player
      */
     void draw (Graphics g) {
-        g.setColor(this.color);
-        g.drawRoundRect((int)this.rectangle.getX() , (int)this.rectangle.getY()
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setStroke(new BasicStroke(3));
+        g2.setColor(this.color);
+        g2.drawRoundRect((int)this.rectangle.getX() , (int)this.rectangle.getY()
                 ,this.rectangle.getBounds().width,(int)this.rectangle.getHeight(),10, 10);
     }
 

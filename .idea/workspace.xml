@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a98f6338-9d1e-4214-8b8f-3455284488c7" name="Changes" comment="Minor fixes">
+    <list default="true" id="a98f6338-9d1e-4214-8b8f-3455284488c7" name="Changes" comment="Created rounded palyer pads">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/guiComponents/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiComponents/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/guiComponents/panelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiComponents/panelClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logic/BouncingBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/logic/BouncingBall.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675349880391</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Created rounded pla pads">
+      <created>1675397368275</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1675397368275</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -135,6 +141,7 @@
     <MESSAGE value="Added action listener class" />
     <MESSAGE value="Implementing rectangle and ellipse objects" />
     <MESSAGE value="Minor fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor fixes" />
+    <MESSAGE value="Created rounded palyer pads" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created rounded palyer pads" />
   </component>
 </project>
