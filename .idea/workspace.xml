@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a98f6338-9d1e-4214-8b8f-3455284488c7" name="Changes" comment="Created rounded player pads">
+    <list default="true" id="a98f6338-9d1e-4214-8b8f-3455284488c7" name="Changes" comment="Added a title">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guiComponents/frameClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiComponents/frameClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guiComponents/panelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiComponents/panelClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675397902211</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added a title">
+      <created>1675398540913</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1675398540913</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -149,6 +156,7 @@
     <MESSAGE value="Minor fixes" />
     <MESSAGE value="Created rounded palyer pads" />
     <MESSAGE value="Created rounded player pads" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created rounded player pads" />
+    <MESSAGE value="Added a title" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a title" />
   </component>
 </project>

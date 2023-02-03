@@ -24,8 +24,10 @@ public class panelClass extends JPanel implements ActionListener {
     public Player player2;
     final int MaxWidth = 900 ;
     Timer timer ;
+    int timerValue = 25 ;
+
     panelClass() {
-        timer = new Timer(25,this);
+        timer = new Timer(timerValue,this);
         timer.start();
         player1 = new Player(10,0 ,0 , Color.magenta);
 
@@ -78,10 +80,12 @@ public class panelClass extends JPanel implements ActionListener {
             player1.setScore(player1.getScore() +1);
         if(bouncingBall.ball.oval.getX() < 0)
             player2.setScore(player2.getScore()+1);
+        //restarting the game by generating a new ball and instantiating
         if (bouncingBall.ball.oval.getX() > MaxWidth || bouncingBall.ball.oval.getX() < 0 ){
             EndGame();
             StartingPosition();
             bouncingBall = new BouncingBall(startX,startY );
+            timerValue = 25;//resetting the speed back to slow
             ContinuePlay();
         }
     }
@@ -89,23 +93,25 @@ public class panelClass extends JPanel implements ActionListener {
     /**
      * Method to check for collisions with the player pad and bounce the ball back
      */
-    public void padImpact()
-    {
+    public void padImpact(){
         //checking if player one hits the ball
        if(bouncingBall.ball.oval.intersects(player1.rectangle)){
            bouncingBall.ball.setxVelocity(bouncingBall.ball.getxVelocity() * -1);
+           if(timerValue > 1)
+               timer.setDelay(timerValue --);
        }
 
        //checking if player 2 hits the ball
         if(bouncingBall.ball.oval.intersects(player2.rectangle)){
             bouncingBall.ball.setxVelocity(bouncingBall.ball.getxVelocity() * -1);
+            if(timerValue > 1)
+                timer.setDelay(timerValue --);
         }
     }
 
     public void PauseGame() {
         timer.stop();
     }
-
     public void ContinuePlay() {
         timer.start();
     }
@@ -118,6 +124,5 @@ public class panelClass extends JPanel implements ActionListener {
         while (player1.rectangle.intersectsLine(line)) {
             startY = r.nextDouble(30,600);
         }
-
     }
 }
