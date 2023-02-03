@@ -3,10 +3,9 @@ package logic;
 import guiComponents.Ball;
 
 import java.awt.*;
-import java.util.Random;
 
 public class BouncingBall {
-    double speed = 1 ;
+    double speed = 3 ;
 
     /**
      * Maximum x and y for the ball to reach

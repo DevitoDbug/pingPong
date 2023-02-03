@@ -10,7 +10,7 @@ public class Player implements KeyListener {
     Color color;
 
     public Player(int x , int y ,int score, Color color) {
-        final int size = 60 ;
+        final int size = 84 ;
         this.color = color;
         this.score = score;
         rectangle = new Rectangle (x,y,size/6,size);
@@ -29,8 +29,8 @@ public class Player implements KeyListener {
      */
     void draw (Graphics g) {
         g.setColor(this.color);
-        g.fillRect((int)this.rectangle.getX() , (int)this.rectangle.getY()
-                ,this.rectangle.getBounds().width,(int)this.rectangle.getHeight());
+        g.drawRoundRect((int)this.rectangle.getX() , (int)this.rectangle.getY()
+                ,this.rectangle.getBounds().width,(int)this.rectangle.getHeight(),10, 10);
     }
 
     /**

@@ -25,12 +25,13 @@ public class panelClass extends JPanel implements ActionListener {
     final int MaxWidth = 900 ;
     Timer timer ;
     panelClass() {
-        timer = new Timer(1,this);
+        timer = new Timer(25,this);
         timer.start();
         player1 = new Player(10,0 ,0 , Color.magenta);
 
-        player2 = new Player(869, 0 ,0 , Color.cyan);
+        player2 = new Player(865, 0 ,0 , Color.cyan);
 
+        //generating random starting position for the ball
         StartingPosition();
         bouncingBall = new BouncingBall(startX,startY);
 
@@ -111,14 +112,10 @@ public class panelClass extends JPanel implements ActionListener {
     public void EndGame() {
         timer.stop();
     }
-    public void StartingPosition()
-    {
-        /**
-         * trying to generate the ball at a random position without generating it behind a player
-         */
+    public void StartingPosition() {
+        //trying to generate the ball at a random position without generating it behind a player
         Line2D line = new Line2D.Float(0, (int)startY, 900, (int)startY);
-        while (player1.rectangle.intersectsLine(line))
-        {
+        while (player1.rectangle.intersectsLine(line)) {
             startY = r.nextDouble(30,600);
         }
 
