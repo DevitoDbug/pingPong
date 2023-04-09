@@ -48,7 +48,7 @@ public class panelClass extends JPanel implements ActionListener {
         this.setVisible(true);
     }
 
-    public void paintComponent(Graphics g) {
+    public void paintComponent(Graphics g){
         super.paintComponent(g);
         g.setColor(Color.cyan);
         player1.draw(g);

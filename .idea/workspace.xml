@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a98f6338-9d1e-4214-8b8f-3455284488c7" name="Changes" comment="Added a title">
+    <list default="true" id="a98f6338-9d1e-4214-8b8f-3455284488c7" name="Changes" comment="Changes on the timer operation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guiComponents/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiComponents/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/guiComponents/frameClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiComponents/frameClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/guiComponents/panelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiComponents/panelClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +25,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="1052ca5f-10fb-4d80-99e8-eea12302732b" />
+        <option name="url" value="https://github.com/DevitoDbug/pingPong.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -141,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675398540913</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Changes on the timer operation">
+      <created>1675447828956</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1675447828956</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -157,6 +180,7 @@
     <MESSAGE value="Created rounded palyer pads" />
     <MESSAGE value="Created rounded player pads" />
     <MESSAGE value="Added a title" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a title" />
+    <MESSAGE value="Changes on the timer operation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes on the timer operation" />
   </component>
 </project>

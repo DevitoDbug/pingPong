@@ -3,8 +3,7 @@ package guiComponents;
 import javax.swing.*;
 
 public class frameClass extends JFrame {
-    frameClass()
-    {
+    frameClass(){
         panelClass panel = new panelClass();
         panel.setSize(900,700);
 
