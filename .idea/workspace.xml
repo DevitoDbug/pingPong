@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a98f6338-9d1e-4214-8b8f-3455284488c7" name="Changes" comment="Changes on the timer operation">
+    <list default="true" id="a98f6338-9d1e-4214-8b8f-3455284488c7" name="Changes" comment="Added a screenshot">
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guiComponents/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiComponents/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guiComponents/frameClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiComponents/frameClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/guiComponents/panelClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/guiComponents/panelClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +55,11 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\DAVID\IdeaProjects\pingPong\src\Screenshot" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -164,7 +167,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675447828956</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added a screenshot">
+      <created>1681032719989</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681032719989</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added a screenshot">
+      <created>1681032846450</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681032846450</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -181,6 +198,7 @@
     <MESSAGE value="Created rounded player pads" />
     <MESSAGE value="Added a title" />
     <MESSAGE value="Changes on the timer operation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes on the timer operation" />
+    <MESSAGE value="Added a screenshot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a screenshot" />
   </component>
 </project>
